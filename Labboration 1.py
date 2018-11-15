@@ -2,7 +2,6 @@
 Detta är spelet ROCK-PAPER-SCISSORS
 """
 
-
 import random
 
 def start():
