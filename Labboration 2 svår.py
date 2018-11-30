@@ -10,7 +10,6 @@ def create_random():
     print(target)
     return target
 
-
 def check_right(target, guesses):
     """Checks right place and right color"""
     right_color = 0
