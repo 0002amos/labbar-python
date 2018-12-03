@@ -7,7 +7,6 @@ def create_random():
     target = [0, 0, 0, 0]
     for number in range(4):
         target[number] = random.randint(0, 5)
-    print(target)
     return target
 
 def check_right(target, guesses):
@@ -19,6 +18,7 @@ def check_right(target, guesses):
 
     for i, color in enumerate(guesses):
         if target[i] == color:
+            controll.remove(color)
             right_place += 1
 
         elif color in controll:
