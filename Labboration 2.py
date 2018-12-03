@@ -48,5 +48,6 @@ def master_mind(target):
 
         if rounds == 7:
             master_mind_GUI.gameover_screen(rounds, "Looser")
-
+            playing = False
+            
 master_mind(create_random())
