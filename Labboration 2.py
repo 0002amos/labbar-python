@@ -5,7 +5,7 @@ import master_mind_GUI
 def create_random():
     """Creates list of 4 letters"""
     target = []
-    target = (random.sample(range(0, 5), 4))
+    target = (random.sample(range(0, 6), 4))
     return target
 
 def check_right(target, guesses):
