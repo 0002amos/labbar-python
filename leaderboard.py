@@ -1,5 +1,6 @@
 from operator import itemgetter 
 import graphics as g
+import json
 
 def create_window():
     LBwindow = g.GraphWin("score",200 ,400)
@@ -84,7 +85,6 @@ def get_new_score_name():
 
     return (name)
 
-
 def add_and_sort(scores, new_name, new_score):
     newlist = sorted(scores, key=itemgetter("score"), reverse=True)
     player6 = {"score":new_score, "name":new_name}
@@ -99,18 +99,14 @@ def add_and_sort(scores, new_name, new_score):
 
 def import_list():
 
-    player1 = {"score":2, "name":"A"}
-    player2 = {"score":4, "name":"B"}
-    player3 = {"score":5, "name":"C"}
-    player4 = {"score":3, "name":"D"}
-    player5 = {"score":2, "name":"E"}
-
-    hs = [player1, player2, player3, player4, player5]
+    with open("HS_file.json", "r") as read_file:
+        hs = json.load(read_file)
 
     return hs
 
 def save_new(list_save):
-    return
+    with open("HS_file.json", "w") as write_file:
+        json.dump(list_save, write_file)
 
 def getscore(rounds):
     if rounds == 1:
