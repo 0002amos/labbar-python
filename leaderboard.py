@@ -25,7 +25,7 @@ def show_lb(scores, lb_window):
     player1 = str(scores[0]["score"]) + "     " + scores[0]["name"]
     player1p = g.Text(g.Point(100, 100), player1)
 
-    player2 = str(scores[1]["score"]) + "     " + scores[2]["name"]
+    player2 = str(scores[1]["score"]) + "     " + scores[1]["name"]
     player2p = g.Text(g.Point(100, 150), player2)
 
     player3 = str(scores[2]["score"]) + "     " + scores[2]["name"]
