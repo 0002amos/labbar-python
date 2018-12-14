@@ -7,7 +7,7 @@ def create_random():
     """Creates list of 4 letters"""
     target = []
     target = (random.sample(range(0, 6), 4))
-    target = [1,2,3,4]
+    target = [1, 2, 3, 4]
     return target
 
 def check_right(target, guesses):
@@ -46,24 +46,24 @@ def master_mind(target):
 
         if guesses == target:
             master_mind_GUI.gameover_screen(rounds, "Winner")
-            
+
             score = getscore(rounds)
-            
+
             new_list = add_and_sort(import_list(), get_new_score_name(), score)
 
-            return(new_list)
+            return new_list
 
-        elif rounds == 7:
+        if rounds == 7:
             master_mind_GUI.gameover_screen(rounds, "Looser")
             playing = False
 
-lb_win = create_window()
-show_lb(import_list(), lb_win)
+LB_WIN = create_window() #questionable constant
+show_lb(import_list(), LB_WIN)
 
-new_board = master_mind(create_random())
-clear(lb_win)
+NEW_BOARD = master_mind(create_random())
+clear(LB_WIN)
 
-show_lb(new_board, lb_win)
-save_new(new_board)
+show_lb(NEW_BOARD, LB_WIN)
+save_new(NEW_BOARD)
 
-lb_win.getMouse()
+LB_WIN.getMouse()
