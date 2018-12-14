@@ -59,8 +59,11 @@ def master_mind(target):
 
 lb_win = create_window()
 show_lb(import_list(), lb_win)
+
 new_board = master_mind(create_random())
 clear(lb_win)
+
 show_lb(new_board, lb_win)
 save_new(new_board)
+
 lb_win.getMouse()
