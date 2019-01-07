@@ -1,7 +1,7 @@
 """game mastermind"""
 import random
 import master_mind_GUI
-from leaderboard import *
+from leaderboard2 import *
 
 def create_random():
     """Creates list of 4 letters"""
@@ -49,7 +49,7 @@ def master_mind(target):
 
             score = getscore(rounds)
 
-            new_list = add_and_sort(import_list(), get_new_score_name(), score)
+            new_list = add_score(import_list(), get_new_score_name(), score)
 
             return new_list
 

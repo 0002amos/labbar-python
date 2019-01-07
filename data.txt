@@ -1,0 +1,1 @@
+{"Ambj\u00f6rn": 128, "Emil": 5, "Thorsten": 8, "Sven": 6, "Erik": 3}
