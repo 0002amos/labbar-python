@@ -34,7 +34,7 @@ def show_lb(highscore, lb_window):
     
     list_sorted = sorted(list_to_sort, key=itemgetter("score"), reverse=True)   #sort the list 
 
-    for i in range(5):  #prepare the printing of top 5 players
+    for i in range(len(list_sorted)):  #prepare the printing of top 5 players
         player = str(list_sorted[i]["score"]) + "     " + list_sorted[i]["name"]
         player_point = g.Text(g.Point(100, hight), player)
         player_point.setSize(10)
@@ -43,9 +43,12 @@ def show_lb(highscore, lb_window):
     
     over_text.draw(lb_window)
     
-    for i in range(5): #print players to board
+    for i in range(len(players_on_board)): #print players to board 
         players_on_board[i].draw(lb_window)
-
+        if i == 4:
+            break
+            #To stop it from writing more then 5 poeple to the board. Cant be added(to my knowledge) as a condition
+            #to the loop since it can be shorten then 5 and then in range(5) gives errors
 
 def get_new_score_name():
     """gets the nane of the player to add to the highscore board"""
